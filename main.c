@@ -3,14 +3,23 @@
 //
 
 #include <stdio.h>
-#include "src/core/User.database.h"
+#include "System.h"
+#include <stdbool.h>
+
 
 int main(){
+    bool exit = false;
 
-    User user1 = {.username = "helloworld", .password = "saoembuon"};
-    User user2 = {.username = "hihi", .password = "hungneemoi"};
+    while(!exit){
+        char option;
+        printf("Your option:");
+        scanf("%s", &option);
+        printf("-----------\n");
 
-    search_user_by_username("C:\\Users\\hungt\\CLionProjects\\FileUtilsV2\\users.txt", "helloworld");
+
+        exit = Choose(option);
+    }
+
 
     return 0;
 }
