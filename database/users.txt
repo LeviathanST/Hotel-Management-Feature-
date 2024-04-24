@@ -1,8 +1,15 @@
-
-
 username: hungnee
 password: 123
+role: admin
 email: 123
 phone: 123
-orderingIds: []
-
+username: 123
+password: 123
+role: member
+email: 123
+phone: 123
+username: 1234
+password: 123
+role: receptionist
+email: 123
+phone: 123

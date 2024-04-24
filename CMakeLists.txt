@@ -14,4 +14,32 @@ add_executable(FileUtilsV2 main.c
         src/core/Order.database.h
         src/utils/CheckToken.c
         src/utils/CheckToken.h
+        src/cli/OrderCommand.c
+        src/cli/OrderCommand.h
+        src/cli/OrderRoomCommand.c
+        src/cli/OrderRoomCommand.h
+        src/core/OrderRoom.c
+        src/core/OrderRoom.h
+        src/cli/OrderRoomCommand.c
+        src/cli/OrderRoomCommand.h
+        src/utils/generateUUID.c
+        src/utils/generateUUID.h
+        src/cli/ServiceCommand.c
+        src/cli/ServiceCommand.h
+        src/core/Staff.database.c
+        src/core/Staff.database.h
+        src/core/OrderService.c
+        src/core/OrderService.h
+        src/utils/FetchUsernameFromTokenFile.c
+        src/utils/FetchUsernameFromTokenFile.h
+        src/utils/ShowUserOrder.c
+        src/utils/ShowUserOrder.h
+        src/cli/OrderServiceCommand.c
+        src/cli/OrderServiceCommand.h
+        src/core/Room.database.c
+        src/core/Room.database.h
+        src/utils/Date.c
+        src/utils/Date.h
+        src/core/Service.database.c
+        src/core/Service.database.h
 )

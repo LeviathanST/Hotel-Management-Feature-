@@ -8,6 +8,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "./src/cli/UserCommand.h"
+#include "./src/cli/OrderCommand.h"
+#include "src/utils/CheckToken.h"
+#include "./src/cli/ServiceCommand.h"
 
 bool Choose(char option);
 

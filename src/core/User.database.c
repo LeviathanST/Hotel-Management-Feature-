@@ -26,17 +26,9 @@ void add_user(const char *filename, const User* user){
 
     fprintf(file, "username: %s\n", user->username);
     fprintf(file, "password: %s\n", user->password);
+    fprintf(file, "role: %s\n", "member");
     fprintf(file, "email: %s\n", user->email);
     fprintf(file, "phone: %s\n", user->phone);
-    fprintf(file, "orderingIds: [");
-    for (size_t i = 0; i < user->numOrderingIds; i++) {
-        // Print each individual ordering ID string and quote them if they are meant to be strings
-        fprintf(file, "\"%s\"", user->orderingIds[i]);
-        if (i < user->numOrderingIds - 1) {
-            fprintf(file, ", "); // Add a comma after all but the last element
-        }
-    }
-    fprintf(file, "]\n\n");
 
     fclose(file);
 }
@@ -74,18 +66,7 @@ bool search_user_by_username(const char *filename, const char *usernameToSearch,
                     fgets(user.password, sizeof(user.password), file); printf("%s", user.password);
                     fgets(user.email, sizeof(user.email), file); printf("%s", user.email);
                     fgets(user.phone, sizeof(user.phone), file); printf("%s", user.phone);
-                    fgets(line, sizeof(line), file); line[strcspn(line, "\n")] = 0;
-                    // Assuming a simple format and not validating the input strictly
-                    // The IDs are expected to be in the form: orderingIds: ["id1","id2","id3"]
-                    char* token = strtok(line + 13, "[\", ]");
-                    user.numOrderingIds = 0;
-                    while (token && user.numOrderingIds < MAX_ORDERING_IDS) {
-                        strncpy(user.orderingIds[user.numOrderingIds], token, MAX_ORDERING_ID_LENGTH-1);
-                        user.orderingIds[user.numOrderingIds][MAX_ORDERING_ID_LENGTH-1] = '\0'; // Ensure null-termination
-                        printf("Ordering ID %zu: %s\n", user.numOrderingIds+1, user.orderingIds[user.numOrderingIds]);
-                        user.numOrderingIds++;
-                        token = strtok(NULL, "[\", ]");
-                    }
+                    fgets(user.role, sizeof(user.role), file); printf("%s", user.role);
                 }
                 foundUser = true;
                 break;
@@ -108,43 +89,61 @@ bool search_user_by_username(const char *filename, const char *usernameToSearch,
  * UPDATE USER
  * */
 
-void update_user(const char *filename, const char *username, const User *updatedUserData) {
+bool update_user(const char *filename, const char *username, User *updatedUserData, const char *fieldToUpdate) {
+    printf("Updating user: %s\n", username);
+
     FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        printf("Could not open file for reading.\n");
-        return;
+    if (!file) {
+        perror("Error opening file for reading");
+        return false;
     }
+
     FILE *tempFile = fopen("temp.txt", "w");
-    if (tempFile == NULL) {
-        printf("Could not open temporary file for writing.\n");
+    if (!tempFile) {
+        perror("Error opening temporary file for writing");
         fclose(file);
-        return;
+        return false;
     }
 
     User currentUser;
-    int found = 0;
+    bool updated = false;
+    char buffer[256];
 
-    // Read current users and write to temporary file
-    while (fscanf(file, "username: %s\npassword: %s\n", currentUser.username, currentUser.password) == 3) {
-        if (currentUser.username == username) {
-            fprintf(tempFile, "username: %s\npassword: %s\n", currentUser.username,updatedUserData->password);
-            found = 1;
-        } else {
-            fprintf(tempFile, "username: %s\npassword: %s\n", currentUser.username, currentUser.password);
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
+        if (sscanf(buffer, "username: %s\n", currentUser.username) == 1 && strcmp(currentUser.username, username) == 0) {
+            // Found the user to update
+            updated = true;
+            fgets(buffer, sizeof(buffer), file); // Read the password
+            sscanf(buffer, "password: %s\n", currentUser.password);
+            fgets(buffer, sizeof(buffer), file); // Read the phone
+            sscanf(buffer, "phone: %s\n", currentUser.phone);
+
+            // Update the necessary field
+            if (strcmp(fieldToUpdate, "password") == 0) {
+                strcpy(currentUser.password, updatedUserData->password);
+            } else if (strcmp(fieldToUpdate, "phone") == 0) {
+                strcpy(currentUser.phone, updatedUserData->phone);
+            }
+
+            // Write updated info
+            fprintf(tempFile, "username: %s\npassword: %s\nphone: %s\n", currentUser.username, currentUser.password, currentUser.phone);
+            continue;
         }
+        // Write all other lines as is
+        fputs(buffer, tempFile);
     }
 
     fclose(file);
     fclose(tempFile);
 
-    // Check if the user was found
-    if (found) {
-        // Delete the old file and rename the new file
+    if (updated) {
+        // Commit changes by renaming files
         remove(filename);
         rename("temp.txt", filename);
+        return true;
     } else {
-        printf("User with username %s not found.\n", username);
         remove("temp.txt");
+        return false;
     }
 }
 
@@ -153,6 +152,7 @@ void update_user(const char *filename, const char *username, const User *updated
  * */
 
 int remove_user(const char *filename, const char *usernameToRemove) {
+
     FILE *file = fopen(filename, "r");
     if (!file) {
         perror("Error opening file for reading");
@@ -208,58 +208,125 @@ int remove_user(const char *filename, const char *usernameToRemove) {
     return found ? 1 : 0;
 }
 
-int login(const char *filename, const char *username, const char *password) {
-    FILE  *tokenFile = fopen("../../database/token.txt", "w");
-    if(!tokenFile){
-        printf("Error!");
-    };
+//int login(const char *filename, const char *username, const char *password) {
+//    FILE  *tokenFile = fopen("database/token.txt", "w");
+//    if (!tokenFile) {
+//        printf("Error opening token file!\n");
+//        return 0; // Exit the function if the token file cannot be opened.
+//    }
+//    FILE *file = fopen(filename, "r");
+//    if (file == NULL) {
+//        printf("File could not be opened for reading.\n");
+//        return 0;
+//    }
+//
+//    User user;
+//    char line[256];
+//    int found = 0;
+//
+//    while (fgets(line, sizeof(line), file) != NULL) {
+//        // Trim newline character
+//        line[strcspn(line, "\r\n")] = 0;
+//
+//        // Matching line with username
+//        if (strncmp(line, "username: ", 10) == 0) {
+//            // Copy the username from the line by offsetting by 10 characters
+//            strcpy(user.username, line + 10);
+//
+//            // Next line should be the password of this user
+//            if (fgets(line, sizeof(line), file) != NULL) {
+//                line[strcspn(line, "\r\n")] = 0;
+//                // Ensure it is formatted as a password line
+//                if (strncmp(line, "password: ", 10) == 0) {
+//                    strcpy(user.password, line + 10);
+//
+//                    if (!strcmp(user.username, username) && !strcmp(user.password, password)) {
+//                        // Collect potential additional details like role
+//                        fgets(line, sizeof(line), file); // Assuming role is the next item
+//                        line[strcspn(line, "\r\n")] = 0;
+//                        if (strncmp(line, "role: ", 6) == 0) {
+//                            strcpy(user.role, line + 6);
+//                            printf("Login successful!\n");
+//                            fprintf(tokenFile, "username: %s\nrole: %s\n", user.username, user.role);
+//                            found = 1;
+//                            break;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//        if (!found) {
+//            printf("Login faiiled!\n");
+//        }
+//
+//
+//    fclose(tokenFile);
+//    fclose(file);
+//    return found;
+//}
 
+bool read_user(FILE* file, User* user) {
+    char line[256];
+    bool hasUsername = false, hasPassword = false, hasRole = false;
+
+    while (fgets(line, sizeof(line), file)) {
+        line[strcspn(line, "\r\n")] = 0; // Remove newline characters
+
+        if (strncmp(line, "username: ", 10) == 0) {
+            strcpy(user->username, line + 10);
+            hasUsername = true;
+        } else if (strncmp(line, "password: ", 10) == 0) {
+            strcpy(user->password, line + 10);
+            hasPassword = true;
+        } else if (strncmp(line, "role: ", 6) == 0) {
+            strcpy(user->role, line + 6);
+            hasRole = true;
+        }
+
+        // Check if all necessary data is gathered to complete user reading
+        if (hasUsername && hasPassword && hasRole) {
+            break;  // Exit once all required data is read
+        }
+    }
+
+    // Return true only if all necessary fields are read
+    return hasUsername && hasPassword && hasRole;
+}
+
+int login(const char *filename, const char *username, const char *password) {
+    FILE *tokenFile = fopen("database/token.txt", "w");
+    if (!tokenFile) {
+        perror("Error opening token file\n");
+        return 0;
+    }
     FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        printf("File could not be opened for reading.\n");
+    if (!file) {
+        perror("File could not be opened for reading\n");
+        fclose(tokenFile);
         return 0;
     }
 
     User user;
-    char line[256];
-    int found = 0;
+    bool found = false;
 
-    while (fgets(line, sizeof(line), file) != NULL) {
-        // Trim newline character
-        line[strcspn(line, "\r\n")] = 0;
-
-        // Matching line with username
-        if (strncmp(line, "username: ", 10) == 0) {
-            // Copy the username from the line by offsetting by 10 characters
-            strcpy(user.username, line + 10);
-
-            // Next line should be the password of this user
-            if (fgets(line, sizeof(line), file) != NULL) {
-                line[strcspn(line, "\r\n")] = 0;
-                // Ensure it is formatted as a password line
-                if (strncmp(line, "password: ", 10) == 0) {
-                    strcpy(user.password, line + 10);
-                    if (strcmp(user.username, username) == 0 && strcmp(user.password, password) == 0) {
-                        printf("Login successful!\n");
-                        fprintf(tokenFile, "Login successful! %s\n", user.username);
-                        found = 1;
-                        break; // Exit if the user is found
-                    }
-                }
-            }
+    while (read_user(file, &user)) {
+        if (strcmp(user.username, username) == 0 && strcmp(user.password, password) == 0) {
+            printf("Login successful!\n");
+            fprintf(tokenFile, "username: %s\nrole: %s\n", user.username, user.role);
+            found = true;
+            break;
         }
     }
 
-        if (!found) {
-            printf("Login faiiled!\n");
-        }
+    if (!found) {
+        printf("Login failed!\n");
+    }
 
-
-
+    fclose(tokenFile);
     fclose(file);
-    return found;
+    return found ? 1 : 0;
 }
-
-
 
 

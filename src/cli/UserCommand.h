@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "../utils/CheckToken.h"
+
 extern bool UserChoose(char option);
 
 #endif //FILEUTILSV2_USERCOMMAND_H

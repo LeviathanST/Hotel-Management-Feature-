@@ -1,0 +1,30 @@
+Order ID: 1cfbcf30-3617-4339-af9e-6757ce2abc89
+Room Number: 13
+Guest Name: 123
+Check-In Date: 12
+Check-Out Date: 12
+Number of Guests: 12
+Order ID: 825decf3-3b84-4b42-9b35-f040713c1227
+Room Number: 14
+Guest Name: 123
+Check-In Date: 12
+Check-Out Date: 12
+Number of Guests: 12
+Order ID: 4e1207f0-d608-4c8b-ba59-05721e654f5d
+Room Number: 12
+Guest Name: hungnee
+Check-In Date: 12
+Check-Out Date: 12
+Number of Guests: 12
+Order ID: 96196545-6d5f-4f8d-91ad-c592611a0d76
+Room Number: 12
+Guest Name: 123
+Check-In Date: 13/4/2024
+Check-Out Date: 13/5/2024
+Number of Guests: 2
+Order ID: 6a44b338-1d32-4cd0-9654-f460fb1e6204
+Room Number: 12
+Guest Name: 123
+Check-In Date: 14/3/2024
+Check-Out Date: 15/3/2024
+Number of Guests: 2

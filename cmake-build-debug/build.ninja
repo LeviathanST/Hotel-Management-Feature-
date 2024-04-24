@@ -85,6 +85,84 @@ build CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj: C_COMPILER__FileUti
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
+build CMakeFiles/FileUtilsV2.dir/src/cli/OrderCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/OrderCommand.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\OrderCommand.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/cli/OrderRoomCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/OrderRoomCommand.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\OrderRoomCommand.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/core/OrderRoom.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/OrderRoom.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\OrderRoom.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
+
+build CMakeFiles/FileUtilsV2.dir/src/utils/generateUUID.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/generateUUID.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\generateUUID.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
+
+build CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/ServiceCommand.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\ServiceCommand.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/core/Staff.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Staff.database.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Staff.database.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
+
+build CMakeFiles/FileUtilsV2.dir/src/core/OrderService.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/OrderService.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\OrderService.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
+
+build CMakeFiles/FileUtilsV2.dir/src/utils/FetchUsernameFromTokenFile.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/FetchUsernameFromTokenFile.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\FetchUsernameFromTokenFile.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
+
+build CMakeFiles/FileUtilsV2.dir/src/utils/ShowUserOrder.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/ShowUserOrder.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\ShowUserOrder.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
+
+build CMakeFiles/FileUtilsV2.dir/src/cli/OrderServiceCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/OrderServiceCommand.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\OrderServiceCommand.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/core/Room.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Room.database.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Room.database.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
+
+build CMakeFiles/FileUtilsV2.dir/src/utils/Date.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/Date.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\Date.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
+
+build CMakeFiles/FileUtilsV2.dir/src/core/Service.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Service.database.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Service.database.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target FileUtilsV2
@@ -93,7 +171,7 @@ build CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj: C_COMPILER__FileUti
 #############################################
 # Link the executable FileUtilsV2.exe
 
-build FileUtilsV2.exe: C_EXECUTABLE_LINKER__FileUtilsV2_Debug CMakeFiles/FileUtilsV2.dir/main.c.obj CMakeFiles/FileUtilsV2.dir/src/core/User.database.c.obj CMakeFiles/FileUtilsV2.dir/System.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/UserCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Order.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj
+build FileUtilsV2.exe: C_EXECUTABLE_LINKER__FileUtilsV2_Debug CMakeFiles/FileUtilsV2.dir/main.c.obj CMakeFiles/FileUtilsV2.dir/src/core/User.database.c.obj CMakeFiles/FileUtilsV2.dir/System.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/UserCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Order.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderRoomCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/OrderRoom.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/generateUUID.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Staff.database.c.obj CMakeFiles/FileUtilsV2.dir/src/core/OrderService.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/FetchUsernameFromTokenFile.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/ShowUserOrder.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderServiceCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Room.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/Date.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Service.database.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
