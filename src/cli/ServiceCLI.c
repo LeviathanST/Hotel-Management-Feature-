@@ -2,7 +2,7 @@
 // Created by hungt on 4/24/2024.
 //
 
-#include "ServiceCommand.h"
+#include "ServiceCLI.h"
 
 bool ServiceChoose(char option){
     switch (option) {
@@ -11,6 +11,12 @@ bool ServiceChoose(char option){
             return false;
         case 's':
             displayServices();
+            return false;
+        case 'u':
+            editService();
+            return false;
+        case 'd':
+            deleteService();
             return false;
         case 'b':
             return true;

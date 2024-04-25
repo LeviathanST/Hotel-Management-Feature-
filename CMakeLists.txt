@@ -24,8 +24,6 @@ add_executable(FileUtilsV2 main.c
         src/cli/OrderRoomCommand.h
         src/utils/generateUUID.c
         src/utils/generateUUID.h
-        src/cli/ServiceCommand.c
-        src/cli/ServiceCommand.h
         src/core/Staff.database.c
         src/core/Staff.database.h
         src/core/OrderService.c
@@ -42,4 +40,6 @@ add_executable(FileUtilsV2 main.c
         src/utils/Date.h
         src/core/Service.database.c
         src/core/Service.database.h
+        src/cli/ServiceCLI.c
+        src/cli/ServiceCLI.h
 )

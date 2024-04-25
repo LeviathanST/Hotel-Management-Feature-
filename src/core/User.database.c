@@ -108,43 +108,68 @@ bool update_user(const char *filename, const char *username, User *updatedUserDa
     User currentUser;
     bool updated = false;
     char buffer[256];
+    bool isUserFound = false;
 
     while (fgets(buffer, sizeof(buffer), file) != NULL) {
-        if (sscanf(buffer, "username: %s\n", currentUser.username) == 1 && strcmp(currentUser.username, username) == 0) {
-            // Found the user to update
-            updated = true;
-            fgets(buffer, sizeof(buffer), file); // Read the password
-            sscanf(buffer, "password: %s\n", currentUser.password);
-            fgets(buffer, sizeof(buffer), file); // Read the phone
-            sscanf(buffer, "phone: %s\n", currentUser.phone);
-
-            // Update the necessary field
-            if (strcmp(fieldToUpdate, "password") == 0) {
-                strcpy(currentUser.password, updatedUserData->password);
-            } else if (strcmp(fieldToUpdate, "phone") == 0) {
-                strcpy(currentUser.phone, updatedUserData->phone);
+        // Check if the line starts with "username: "
+        if (strncmp("username: ", buffer, 10) == 0) {
+            if (isUserFound && updated) {  // Finish writing updated user
+                fprintf(tempFile, "username: %s\n", currentUser.username);
+                fprintf(tempFile, "password: %s\n", currentUser.password);
+                fprintf(tempFile, "role: %s\n", currentUser.role);
+                fprintf(tempFile, "email: %s\n", currentUser.email);
+                fprintf(tempFile, "phone: %s\n", currentUser.phone);
+                updated = false;  // Reset for next user
             }
-
-            // Write updated info
-            fprintf(tempFile, "username: %s\npassword: %s\nphone: %s\n", currentUser.username, currentUser.password, currentUser.phone);
-            continue;
+            sscanf(buffer, "username: %255s", currentUser.username);
+            isUserFound = (strcmp(currentUser.username, username) == 0);  // Update flag if username matches
         }
-        // Write all other lines as is
-        fputs(buffer, tempFile);
+        if (isUserFound) {
+            if (strncmp("password: ", buffer, 10) == 0 && strcmp(fieldToUpdate, "password") == 0) {
+                strcpy(currentUser.password, updatedUserData->password);
+                updated = true;
+                continue;
+            } else if (strncmp("role: ", buffer, 6) == 0 && strcmp(fieldToUpdate, "role") == 0) {
+                strcpy(currentUser.role, updatedUserData->role);
+                updated = true;
+                continue;
+            } else if (strncmp("email: ", buffer, 7) == 0 && strcmp(fieldToUpdate, "email") == 0) {
+                strcpy(currentUser.email, updatedUserData->email);
+                updated = true;
+                continue;
+            } else if (strncmp("phone: ", buffer, 7) == 0 && strcmp(fieldToUpdate, "phone") == 0) {
+                strcpy(currentUser.phone, updatedUserData->phone);
+                updated = true;
+                continue;
+            }
+            // Write original data if not updating that field
+            fputs(buffer, tempFile);
+        } else {
+            // Write all other lines as is
+            fputs(buffer, tempFile);
+        }
+    }
+
+    if (isUserFound && updated) {  // Last user update case
+        fprintf(tempFile, "username: %s\n", currentUser.username);
+        fprintf(tempFile, "password: %s\n", currentUser.password);
+        fprintf(tempFile, "role: %s\n", currentUser.role);
+        fprintf(tempFile, "email: %s\n", currentUser.email);
+        fprintf(tempFile, "phone: %s\n", currentUser.phone);
     }
 
     fclose(file);
     fclose(tempFile);
 
     if (updated) {
-        // Commit changes by renaming files
+        // Rename temp file to original file
         remove(filename);
         rename("temp.txt", filename);
-        return true;
     } else {
-        remove("temp.txt");
-        return false;
+        remove("temp.txt"); // Clean up if no update was needed
     }
+
+    return updated;
 }
 
 /*

@@ -8,6 +8,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+
+
 
 #define MAX_SERVICES 100
 #define MAX_NAME_LENGTH 50
@@ -17,7 +20,10 @@ typedef struct Service {
     float price;
 };
 
-struct Service services[MAX_SERVICES];
-int numServices = 0; // Number of services currently stored
+int loadServicesFromFile();
+void displayServices();
+void addService();
+void editService();
+void deleteService();
 
 #endif //FILEUTILSV2_SERVICE_DATABASE_H

@@ -109,6 +109,16 @@ bool UserChoose(char option){
                         printf("Phone number update failed.\n");
                     }
                     return false;
+                case 'r':
+                    printf("Enter your new role:");
+                    scanf("%10s", updatedUserdata.role);
+
+                    if (update_user("database/users.txt", username, &updatedUserdata, "role")) {
+                        printf("Phone number updated successfully!\n");
+                    } else {
+                        printf("Phone number update failed.\n");
+                    }
+                    return false;
                 default:
                     printf("Your choice is invalid. Please try again!\n");
                     return false;
