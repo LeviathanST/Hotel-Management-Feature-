@@ -5,10 +5,20 @@
 #ifndef FILEUTILSV2_ROOM_DATABASE_H
 #define FILEUTILSV2_ROOM_DATABASE_H
 
-typedef struct {
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define maxRoom 20
+#define maxCustomer 20
+#define filename "hotel_data.txt"
+
+typedef struct Room {
     int roomNumber;
-    char roomType[10];
-    float roomPrice;
+    char isOccupied[3];
 } Room;
+
+int read_room_status_from_file(const char *file_path, Room **rooms);
 
 #endif //FILEUTILSV2_ROOM_DATABASE_H

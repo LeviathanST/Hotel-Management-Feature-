@@ -89,9 +89,76 @@ bool search_user_by_username(const char *filename, const char *usernameToSearch,
  * UPDATE USER
  * */
 
-bool update_user(const char *filename, const char *username, User *updatedUserData, const char *fieldToUpdate) {
-    printf("Updating user: %s\n", username);
+//bool update_user(const char *filename, const char *username, User *updatedUserData, const char *fieldToUpdate) {
+//    FILE *file = fopen(filename, "r");
+//    if (!file) {
+//        perror("Error opening file for reading");
+//        return false;
+//    }
+//
+//    FILE *tempFile = fopen("temp.txt", "w");
+//    if (!tempFile) {
+//        perror("Error opening temporary file for writing");
+//        fclose(file);
+//        return false;
+//    }
+//
+//    char buffer[1024];
+//    bool found = false, updated = false;
+//
+//    while (fgets(buffer, sizeof(buffer), file)) {
+//        char *newline = strchr(buffer, '\n');
+//        if (newline) *newline = '\0';  // Remove newline character if present
+//
+//        if (strncmp("username: ", buffer, 10) == 0) {
+//            // Always write the username line to the temp file
+//            fprintf(tempFile, "%s\n", buffer);
+//
+//            if (strcmp(buffer + 10, username) == 0) {
+//                found = true;  // Found the target user
+//            } else {
+//                if (found && updated) {
+//                    // Finish updating the current user if next user starts
+//                    found = false;
+//                }
+//            }
+//        } else if (found && strncmp(buffer, fieldToUpdate, strlen(fieldToUpdate)) == 0) {
+//            if (!updated) {  // Update the field only once
+//                char updateLine[1024];
+//                sprintf(updateLine, "%s: %s", fieldToUpdate, (strcmp(fieldToUpdate, "role") == 0) ? updatedUserData->role :
+//                                                             (strcmp(fieldToUpdate, "password") == 0) ? updatedUserData->password :
+//                                                             (strcmp(fieldToUpdate, "email") == 0) ? updatedUserData->email :
+//                                                             updatedUserData->phone);
+//                fprintf(tempFile, "%s\n", updateLine);
+//                updated = true;
+//                continue; // Skip the original line to prevent duplication
+//            }
+//        } else {
+//            // Write other lines unchanged
+//            fprintf(tempFile, "%s\n", buffer);
+//        }
+//    }
+//
+//    fclose(file);
+//    fclose(tempFile);
+//
+//    // Replace the original file with the updated temp file
+//    if (updated) {
+//        remove(filename);
+//        rename("temp.txt", filename);
+////        printf("Update completed successfully for %s.\n", fieldToUpdate);
+//        return true;
+//    } else {
+//        remove("temp.txt");
+////        printf("No update necessary for %s.\n", fieldToUpdate);
+//        return false;
+//    }
+//}
 
+
+#define BUFFER_SIZE 1024
+
+bool update_user(const char *filename, const char *username, User *updatedUserData, const char *fieldToUpdate) {
     FILE *file = fopen(filename, "r");
     if (!file) {
         perror("Error opening file for reading");
@@ -105,72 +172,44 @@ bool update_user(const char *filename, const char *username, User *updatedUserDa
         return false;
     }
 
-    User currentUser;
-    bool updated = false;
-    char buffer[256];
-    bool isUserFound = false;
+    char buffer[BUFFER_SIZE];
 
-    while (fgets(buffer, sizeof(buffer), file) != NULL) {
-        // Check if the line starts with "username: "
+    bool found = false, updated = false;
+    while (fgets(buffer, sizeof(buffer), file)) {
+        char *newline = strchr(buffer, '\n');
+        if (newline) *newline = '\0';  // Remove newline character if present
+
         if (strncmp("username: ", buffer, 10) == 0) {
-            if (isUserFound && updated) {  // Finish writing updated user
-                fprintf(tempFile, "username: %s\n", currentUser.username);
-                fprintf(tempFile, "password: %s\n", currentUser.password);
-                fprintf(tempFile, "role: %s\n", currentUser.role);
-                fprintf(tempFile, "email: %s\n", currentUser.email);
-                fprintf(tempFile, "phone: %s\n", currentUser.phone);
-                updated = false;  // Reset for next user
-            }
-            sscanf(buffer, "username: %255s", currentUser.username);
-            isUserFound = (strcmp(currentUser.username, username) == 0);  // Update flag if username matches
-        }
-        if (isUserFound) {
-            if (strncmp("password: ", buffer, 10) == 0 && strcmp(fieldToUpdate, "password") == 0) {
-                strcpy(currentUser.password, updatedUserData->password);
-                updated = true;
-                continue;
-            } else if (strncmp("role: ", buffer, 6) == 0 && strcmp(fieldToUpdate, "role") == 0) {
-                strcpy(currentUser.role, updatedUserData->role);
-                updated = true;
-                continue;
-            } else if (strncmp("email: ", buffer, 7) == 0 && strcmp(fieldToUpdate, "email") == 0) {
-                strcpy(currentUser.email, updatedUserData->email);
-                updated = true;
-                continue;
-            } else if (strncmp("phone: ", buffer, 7) == 0 && strcmp(fieldToUpdate, "phone") == 0) {
-                strcpy(currentUser.phone, updatedUserData->phone);
-                updated = true;
-                continue;
-            }
-            // Write original data if not updating that field
-            fputs(buffer, tempFile);
+            fprintf(tempFile, "%s\n", buffer);
+            found = (strcmp(buffer + 10, username) == 0);  // Check if this is the target user
+        } else if (found && strncmp(buffer, fieldToUpdate, strlen(fieldToUpdate)) == 0) {
+            char updateLine[BUFFER_SIZE];
+            snprintf(updateLine, BUFFER_SIZE, "%s: %s", fieldToUpdate,
+                     (strcmp(fieldToUpdate, "role") == 0) ? updatedUserData->role :
+                     (strcmp(fieldToUpdate, "password") == 0) ? updatedUserData->password :
+                     (strcmp(fieldToUpdate, "email") == 0) ? updatedUserData->email :
+                     updatedUserData->phone);
+            fprintf(tempFile, "%s\n", updateLine);
+            updated = true;
+            continue;  // Skip writing the original unupdated line
         } else {
-            // Write all other lines as is
-            fputs(buffer, tempFile);
+            fprintf(tempFile, "%s\n", buffer);  // Write all other lines unchanged
         }
-    }
-
-    if (isUserFound && updated) {  // Last user update case
-        fprintf(tempFile, "username: %s\n", currentUser.username);
-        fprintf(tempFile, "password: %s\n", currentUser.password);
-        fprintf(tempFile, "role: %s\n", currentUser.role);
-        fprintf(tempFile, "email: %s\n", currentUser.email);
-        fprintf(tempFile, "phone: %s\n", currentUser.phone);
     }
 
     fclose(file);
     fclose(tempFile);
 
     if (updated) {
-        // Rename temp file to original file
         remove(filename);
         rename("temp.txt", filename);
+        return true;
     } else {
-        remove("temp.txt"); // Clean up if no update was needed
+        remove("temp.txt");
+        return false;
     }
-
-    return updated;
 }
+
 
 /*
  * REMOVE USER

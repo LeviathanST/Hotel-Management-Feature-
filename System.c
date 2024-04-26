@@ -2,11 +2,6 @@
 // Created by hungt on 4/22/2024.
 //
 
-
-
-//
-// Created by hungt on 4/22/2024.
-//
 #include "System.h"
 
 bool Choose(char option){
@@ -48,6 +43,27 @@ bool Choose(char option){
                 printf("-----------\n");
 
                 back = ServiceChoose(choice);
+            }
+            return false;
+        case 'r':
+            while(!back){
+                printf("Room:");
+                char choice;
+                scanf("%s", &choice);
+                printf("-----------\n");
+
+                back = RoomChoose(choice);
+            }
+
+            return false;
+        case 'a':
+            while(!back){
+                printf("Staff:");
+                char choice;
+                scanf("%s", &choice);
+                printf("-----------\n");
+
+                back = StaffChoose(choice);
             }
             return false;
         case 'q':

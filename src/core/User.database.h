@@ -22,7 +22,7 @@
 typedef struct {
     char username[MAX_USERNAME_LENGTH];
     char password[MAX_PASSWORD_LENGTH];
-    char role [20];
+    char role [100];
     char email[MAX_EMAIL_LENGTH];
     char phone[MAX_PHONE_LENGTH];
 } User;

@@ -12,6 +12,7 @@
 #include <ctype.h>
 
 #include "../core/Service.database.h"
+#include "../utils/CheckToken.h"
 
 #define MAX_SERVICES 100
 #define MAX_NAME_LENGTH 50

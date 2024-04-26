@@ -10,8 +10,21 @@ bool OrderRoomChoose(char option){
     char uuid[37];
     generate_uuid(uuid);
 
+    const char* authorized_roles2[] = {"member"};
+    const char* authorized_roles3[] = {"admin", "rcp",};
+    const char* authorized_roles4[] = {"admin", "rcp", "member"};
+    int num_roles2 = sizeof(authorized_roles2) / sizeof(authorized_roles2[0]);
+    int num_roles3 = sizeof(authorized_roles3) / sizeof(authorized_roles3[0]);
+    int num_roles4 = sizeof(authorized_roles4) / sizeof(authorized_roles4[0]);
+
+
     switch (option) {;
         case 'n':
+            if(!check_role(authorized_roles3, num_roles3)){
+                printf("Not enough permission!");
+                return false;
+            }
+
             char guestUsername[MAX_LINE_LENGTH];
             if (!fetch_username_from_token(guestUsername)) {
                 printf("Please login and try again!\n");
@@ -22,6 +35,11 @@ bool OrderRoomChoose(char option){
 
             printf("Enter room number:");
             scanf("%d", &room.roomNumber); // Read an integer
+            if(room.roomNumber < 1 || room.roomNumber > 20){
+                printf("Room number is invalid!");
+                return false;
+            }
+
             while (getchar() != '\n'); // Clear the input buffer
 
             printf("Enter check-in date: [YYYY-MM-DD]\n");
@@ -40,7 +58,37 @@ bool OrderRoomChoose(char option){
             printf("-----------\n");
             return false;
         case 's':
-            show_user_orders("room");
+            char currentUsername[MAX_LINE_LENGTH];
+            if(check_role(authorized_roles2, num_roles2)){
+                if (!fetch_username_from_token(currentUsername)) {
+                    printf("Please login and try again!\n");
+                    return false;
+                }
+
+                show_user_orders("room", NULL);
+            } else if (check_role(authorized_roles3, num_roles3)){
+                char choice;
+                printf("Choose type: [g: get all; u: get by username]");
+                scanf("%s", &choice);
+                printf("-----------\n");
+
+                switch (choice) {
+                    case 'g':
+                        read_and_display_all_room_orders();
+                        return false;
+                    case 'u':
+                        printf("Username:");
+                        scanf("%s", currentUsername);
+                        printf("-----------\n");
+
+                        show_user_orders("room", currentUsername);
+                        return false;
+                    default:
+                        printf("Invalid. Please try again!");
+                        return false;
+                }
+            }
+
             return false;
         case 'b':
             return true;

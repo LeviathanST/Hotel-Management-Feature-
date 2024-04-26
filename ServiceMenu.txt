@@ -1,0 +1,23 @@
+
+//SERVICES
+printf("#---------------------------------#\n");
+printf("|      MENU MANAGER SERVICES      |\n");
+printf("|---------------------------------|\n");
+printf("|    1. Show list of services     |\n");
+printf("|    2. Add new service           |\n");
+printf("|    3. Edit service information  |\n");
+printf("|    4. Delete service            |\n");
+printf("|    5. Exit                      |\n");
+printf("#---------------------------------#\n");       
+        
+     
+//ROOM   
+printf("#-------------------------------#\n");
+printf("|      ORDER ROOM CHOOSE        |\n");
+printf("|-------------------------------|\n");
+printf("|    1. Enter room number       |\n");
+printf("|    2. Enter check-in date     |\n");
+printf("|    3. Enter check-out date    |\n");
+printf("|    4. Enter number of guests  |\n");
+printf("|    5. Exit                    |\n");
+printf("#-------------------------------#\n");

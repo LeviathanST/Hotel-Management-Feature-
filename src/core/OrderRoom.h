@@ -17,6 +17,7 @@
 #define MAX_LINE_LENGTH 255
 
 extern void add_room(OrderRoom room);
+void read_and_display_all_room_orders();
 
 
 #endif //FILEUTILSV2_ORDERROOM_H

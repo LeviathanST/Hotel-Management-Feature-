@@ -11,6 +11,8 @@
 #include "../utils/generateUUID.h"
 #include "../utils/ShowUserOrder.h"
 #include "../core/OrderService.h"
+#include "../utils/CheckToken.h"
+#include "../core/User.database.h"
 
 bool OrderServiceChoose(char option);
 

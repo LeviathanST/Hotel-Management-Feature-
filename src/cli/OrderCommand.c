@@ -30,7 +30,6 @@ bool OrderChoose(char option){
             }
             return false;
         case 'b':
-
             return true;
         default:
             printf("Option is invalid. Please try again!\n");

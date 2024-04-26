@@ -15,5 +15,6 @@
 #include "../utils/ShowUserOrder.h"
 
 void add_service(OrderService *service);
+void read_and_display_all_orders();
 
 #endif //FILEUTILSV2_ORDERSERVICE_H

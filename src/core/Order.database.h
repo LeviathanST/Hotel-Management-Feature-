@@ -11,8 +11,8 @@ typedef struct {
     char orderID[36];        // Unique identifier for the order
     int roomNumber;     // Room number assigned to the order
     char guestName[50]; // Name of the guest
-    char checkInDate; // Check-in date in YYYY-MM-DD format
-    char checkOutDate; // Check-out date in YYYY-MM-DD format
+    char checkInDate[11];    // Check-in date in YYYY-MM-DD format
+    char checkOutDate[11];  // Check-out date in YYYY-MM-DD format
     int numberOfGuests; // Number of guests staying
 } OrderRoom;
 

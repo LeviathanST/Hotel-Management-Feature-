@@ -45,11 +45,11 @@ bool UserChoose(char option){
             printf("-----------\n");
             return false;
         case 'r':
-            const char* authorized_roles1[] = {"admin", "member"};
+            const char* authorized_roles1[] = {"admin"};
             int num_roles1 = sizeof(authorized_roles1) / sizeof(authorized_roles1[0]);
 
             if(!check_role(authorized_roles1, num_roles1)){
-                printf("Not enough permission. Please login!\n");
+                printf("Not enough permission!\n");
                 return false;
             }
 
@@ -67,10 +67,26 @@ bool UserChoose(char option){
                 return false;
             }
 
-            printf("Username:");
-            scanf("%s", usernameInput);
+            const char* authorized_roles3[] = {"admin"};
+            int num_roles3 = sizeof(authorized_roles3) / sizeof(authorized_roles3[0]);
 
-            search_user_by_username(path, usernameInput, true);
+            const char* authorized_roles4[] = {"member"};
+            int num_roles4 = sizeof(authorized_roles4) / sizeof(authorized_roles4[0]);
+
+            if(check_role(authorized_roles3, num_roles3)){
+                printf("Username:");
+                scanf("%s", usernameInput);
+
+                search_user_by_username(path, usernameInput, true);
+            } else if(check_role(authorized_roles4, num_roles4)){
+                if(!fetch_username_from_token(usernameInput)){
+                    printf("Error. Please login and try again!\n");
+                }
+
+                search_user_by_username(path, usernameInput, true);
+            } else {
+                printf("Not enough permission!\n");
+            }
             printf("-----------\n");
             return false;
         case 'u':
@@ -114,9 +130,9 @@ bool UserChoose(char option){
                     scanf("%10s", updatedUserdata.role);
 
                     if (update_user("database/users.txt", username, &updatedUserdata, "role")) {
-                        printf("Phone number updated successfully!\n");
+                        printf("Role updated successfully.\n");
                     } else {
-                        printf("Phone number update failed.\n");
+                        printf("Role update failed.\n");
                     }
                     return false;
                 default:

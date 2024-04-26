@@ -11,8 +11,9 @@
 
 #include "FetchUsernameFromTokenFile.h"
 #include "../core/Order.database.h"
+#include "../core/User.database.h"
 
-void show_user_orders(char type[10]);
+void show_user_orders(char type[12], const char *guestUsername);
 
 
 #endif //FILEUTILSV2_SHOWUSERORDER_H

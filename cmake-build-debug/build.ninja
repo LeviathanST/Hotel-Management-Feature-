@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debug/
+cmake_ninja_workdir = D$:/Workspace/Collection-Programming/C/FileUtilsV2/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target FileUtilsV2
 
@@ -49,119 +49,137 @@ cmake_ninja_workdir = C$:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debu
 
 build cmake_object_order_depends_target_FileUtilsV2: phony || CMakeFiles/FileUtilsV2.dir
 
-build CMakeFiles/FileUtilsV2.dir/main.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/main.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/main.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/main.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir
 
-build CMakeFiles/FileUtilsV2.dir/src/core/User.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/User.database.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/User.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/User.database.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\User.database.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/System.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/System.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/System.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/System.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\System.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir
 
-build CMakeFiles/FileUtilsV2.dir/src/cli/UserCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/UserCommand.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/cli/UserCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/UserCommand.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\UserCommand.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
 
-build CMakeFiles/FileUtilsV2.dir/src/core/Order.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Order.database.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/Order.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/Order.database.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Order.database.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/CheckToken.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/utils/CheckToken.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\CheckToken.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
-build CMakeFiles/FileUtilsV2.dir/src/cli/OrderCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/OrderCommand.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/cli/OrderCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/OrderCommand.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\OrderCommand.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
 
-build CMakeFiles/FileUtilsV2.dir/src/cli/OrderRoomCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/OrderRoomCommand.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/cli/OrderRoomCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/OrderRoomCommand.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\OrderRoomCommand.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
 
-build CMakeFiles/FileUtilsV2.dir/src/core/OrderRoom.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/OrderRoom.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/OrderRoom.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/OrderRoom.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\OrderRoom.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/src/utils/generateUUID.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/generateUUID.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/utils/generateUUID.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/utils/generateUUID.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\generateUUID.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
-build CMakeFiles/FileUtilsV2.dir/src/core/Staff.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Staff.database.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/Staff.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/Staff.database.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Staff.database.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/src/core/OrderService.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/OrderService.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/OrderService.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/OrderService.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\OrderService.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/src/utils/FetchUsernameFromTokenFile.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/FetchUsernameFromTokenFile.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/utils/FetchUsernameFromTokenFile.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/utils/FetchUsernameFromTokenFile.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\FetchUsernameFromTokenFile.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
-build CMakeFiles/FileUtilsV2.dir/src/utils/ShowUserOrder.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/ShowUserOrder.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/utils/ShowUserOrder.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/utils/ShowUserOrder.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\ShowUserOrder.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
-build CMakeFiles/FileUtilsV2.dir/src/cli/OrderServiceCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/OrderServiceCommand.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/cli/OrderServiceCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/OrderServiceCommand.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\OrderServiceCommand.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
 
-build CMakeFiles/FileUtilsV2.dir/src/core/Room.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Room.database.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/Room.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/Room.database.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Room.database.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/src/utils/Date.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/utils/Date.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/utils/Date.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/utils/Date.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\Date.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
-build CMakeFiles/FileUtilsV2.dir/src/core/Service.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/core/Service.database.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/core/Service.database.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/core/Service.database.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\core\Service.database.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\core
 
-build CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCLI.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug C$:/Users/hungt/CLionProjects/FileUtilsV2/src/cli/ServiceCLI.c || cmake_object_order_depends_target_FileUtilsV2
+build CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCLI.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/ServiceCLI.c || cmake_object_order_depends_target_FileUtilsV2
   DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\ServiceCLI.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
   OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/cli/StaffCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/StaffCommand.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\StaffCommand.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/cli/RoomCommand.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/cli/RoomCommand.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\cli\RoomCommand.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\cli
+
+build CMakeFiles/FileUtilsV2.dir/src/utils/readFromFile.c.obj: C_COMPILER__FileUtilsV2_unscanned_Debug D$:/Workspace/Collection-Programming/C/FileUtilsV2/src/utils/readFromFile.c || cmake_object_order_depends_target_FileUtilsV2
+  DEP_FILE = CMakeFiles\FileUtilsV2.dir\src\utils\readFromFile.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
+  OBJECT_FILE_DIR = CMakeFiles\FileUtilsV2.dir\src\utils
 
 
 # =============================================================================
@@ -171,7 +189,7 @@ build CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCLI.c.obj: C_COMPILER__FileUtils
 #############################################
 # Link the executable FileUtilsV2.exe
 
-build FileUtilsV2.exe: C_EXECUTABLE_LINKER__FileUtilsV2_Debug CMakeFiles/FileUtilsV2.dir/main.c.obj CMakeFiles/FileUtilsV2.dir/src/core/User.database.c.obj CMakeFiles/FileUtilsV2.dir/System.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/UserCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Order.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderRoomCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/OrderRoom.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/generateUUID.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Staff.database.c.obj CMakeFiles/FileUtilsV2.dir/src/core/OrderService.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/FetchUsernameFromTokenFile.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/ShowUserOrder.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderServiceCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Room.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/Date.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Service.database.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCLI.c.obj
+build FileUtilsV2.exe: C_EXECUTABLE_LINKER__FileUtilsV2_Debug CMakeFiles/FileUtilsV2.dir/main.c.obj CMakeFiles/FileUtilsV2.dir/src/core/User.database.c.obj CMakeFiles/FileUtilsV2.dir/System.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/UserCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Order.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/CheckToken.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderRoomCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/OrderRoom.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/generateUUID.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Staff.database.c.obj CMakeFiles/FileUtilsV2.dir/src/core/OrderService.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/FetchUsernameFromTokenFile.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/ShowUserOrder.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/OrderServiceCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Room.database.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/Date.c.obj CMakeFiles/FileUtilsV2.dir/src/core/Service.database.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/ServiceCLI.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/StaffCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/cli/RoomCommand.c.obj CMakeFiles/FileUtilsV2.dir/src/utils/readFromFile.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\FileUtilsV2.dir
@@ -186,7 +204,7 @@ build FileUtilsV2.exe: C_EXECUTABLE_LINKER__FileUtilsV2_Debug CMakeFiles/FileUti
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\hungt\CLionProjects\FileUtilsV2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Workspace\Collection-Programming\C\FileUtilsV2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -197,7 +215,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\hungt\CLionProjects\FileUtilsV2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\hungt\CLionProjects\FileUtilsV2 -BC:\Users\hungt\CLionProjects\FileUtilsV2\cmake-build-debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Workspace\Collection-Programming\C\FileUtilsV2\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Workspace\Collection-Programming\C\FileUtilsV2 -BD:\Workspace\Collection-Programming\C\FileUtilsV2\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -215,7 +233,7 @@ build FileUtilsV2: phony FileUtilsV2.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debug
+# Folder: D:/Workspace/Collection-Programming/C/FileUtilsV2/cmake-build-debug
 
 build all: phony FileUtilsV2.exe
 
@@ -226,14 +244,14 @@ build all: phony FileUtilsV2.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/hungt/CLionProjects/FileUtilsV2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/Workspace/Collection-Programming/C/FileUtilsV2/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/hungt/CLionProjects/FileUtilsV2/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake D$:/Workspace/Collection-Programming/C/FileUtilsV2/CMakeLists.txt: phony
 
 
 #############################################

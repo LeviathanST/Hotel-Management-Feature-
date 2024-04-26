@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "FileUtilsV2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-FileUtilsV2-Debug-a431e5da330ff722cfd5.json",
+					"jsonFile" : "target-FileUtilsV2-Debug-a0fa2f421c70bb689bd4.json",
 					"name" : "FileUtilsV2",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debug",
-		"source" : "C:/Users/hungt/CLionProjects/FileUtilsV2"
+		"build" : "D:/Workspace/Collection-Programming/C/FileUtilsV2/cmake-build-debug",
+		"source" : "D:/Workspace/Collection-Programming/C/FileUtilsV2"
 	},
 	"version" : 
 	{

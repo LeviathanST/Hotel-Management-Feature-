@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debug"
+			"value" : "d:/Workspace/Collection-Programming/C/FileUtilsV2/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/Workspace/Collection-Programming/C/FileUtilsV2/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/hungt/CLionProjects/FileUtilsV2"
+			"value" : "D:/Workspace/Collection-Programming/C/FileUtilsV2"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hungt/CLionProjects/FileUtilsV2/cmake-build-debug"
+			"value" : "D:/Workspace/Collection-Programming/C/FileUtilsV2/cmake-build-debug"
 		},
 		{
 			"name" : "FileUtilsV2_IS_TOP_LEVEL",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/hungt/CLionProjects/FileUtilsV2"
+			"value" : "D:/Workspace/Collection-Programming/C/FileUtilsV2"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

@@ -1,0 +1,40 @@
+Room Number: 1
+Occupied: No
+Room Number: 2
+Occupied: No
+Room Number: 3
+Occupied: No
+Room Number: 4
+Occupied: No
+Room Number: 5
+Occupied: No
+Room Number: 6
+Occupied: No
+Room Number: 7
+Occupied: No
+Room Number: 8
+Occupied: No
+Room Number: 9
+Occupied: No
+Room Number: 10
+Occupied: No
+Room Number: 11
+Occupied: No
+Room Number: 12
+Occupied: No
+Room Number: 13
+Occupied: No
+Room Number: 14
+Occupied: No
+Room Number: 15
+Occupied: No
+Room Number: 16
+Occupied: No
+Room Number: 17
+Occupied: No
+Room Number: 18
+Occupied: No
+Room Number: 19
+Occupied: No
+Room Number: 20
+Occupied: No

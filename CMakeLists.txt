@@ -42,4 +42,10 @@ add_executable(FileUtilsV2 main.c
         src/core/Service.database.h
         src/cli/ServiceCLI.c
         src/cli/ServiceCLI.h
+        src/cli/StaffCommand.c
+        src/cli/StaffCommand.h
+        src/cli/RoomCommand.c
+        src/cli/RoomCommand.h
+        src/utils/readFromFile.c
+        src/utils/readFromFile.h
 )

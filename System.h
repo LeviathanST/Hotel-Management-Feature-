@@ -11,6 +11,8 @@
 #include "./src/cli/OrderCommand.h"
 #include "src/utils/CheckToken.h"
 #include "src/cli/ServiceCLI.h"
+#include "src/cli/StaffCommand.h"
+#include "src/cli/RoomCommand.h"
 
 bool Choose(char option);
 
