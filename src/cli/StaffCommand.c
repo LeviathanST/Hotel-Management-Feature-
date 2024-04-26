@@ -3,6 +3,7 @@
 //
 
 #include "StaffCommand.h"
+#include "../utils/readFromFile.h"
 
 #define LINE_MAX_LENGTH 256
 
@@ -104,6 +105,7 @@ bool StaffChoose(char option){
 
             return false;
         case 'u':
+            readFileContents("guide/UpdateDateWork.txt");
             printf("UUID:");
             char UUID[37]; // UUIDs are typically 36 characters + 1 for the null terminator
             scanf("%36s", UUID);

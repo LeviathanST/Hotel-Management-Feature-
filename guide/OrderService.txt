@@ -1,0 +1,10 @@
+@__________________________________@
+|       ORDER SERVICE CHOICE       |
+|----------------------------------|
+|    {n}- New Order Service        |
+|    {s}- Show Order Service       |
+|    {u}- Edit Service Information |
+|    {d}- Delete Service  	   |
+|    {b}- Back To Menu             |
+#__________________________________#
+

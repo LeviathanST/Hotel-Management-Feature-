@@ -1,0 +1,12 @@
+@__________________________________@
+|          STAFF's CHOICE          |
+|----------------------------------|
+|     {n}- New Date Work           |
+|     {r}- Assign Role             |
+|     {g}- Get All Date Work  	   |
+|     {c}- Salary Calculation  	   |
+|     {s}- Search DW By Username   |
+|     {u}- Update Date Work        |
+|     {b}- Back To Menu            |
+#__________________________________#
+

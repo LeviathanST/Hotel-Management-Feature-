@@ -10,10 +10,6 @@
 #include <string.h>
 #include <time.h>
 
-#define maxRoom 20
-#define maxCustomer 20
-#define filename "hotel_data.txt"
-
 typedef struct Room {
     int roomNumber;
     char isOccupied[3];

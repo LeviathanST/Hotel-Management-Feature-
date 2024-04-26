@@ -3,13 +3,14 @@
 //
 
 #include "OrderCommand.h"
+#include "../utils/readFromFile.h"
 
 bool OrderChoose(char option){
     bool back = false;
 
     switch (option) {;
         case 'r':
-
+            readFileContents("guide/OrderRoom.txt");
             while(!back){
                 printf("Order room:");
                 char choice;

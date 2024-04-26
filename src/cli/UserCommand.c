@@ -4,6 +4,7 @@
 
 #include "UserCommand.h"
 #include "../core/User.database.h"
+#include "../utils/readFromFile.h"
 
 
 bool UserChoose(char option){
@@ -90,6 +91,7 @@ bool UserChoose(char option){
             printf("-----------\n");
             return false;
         case 'u':
+            readFileContents("guide/UpdateUserData.txt");
             char username[MAX_LINE_LENGTH];
             char choice;
 
@@ -97,8 +99,6 @@ bool UserChoose(char option){
                 printf("Please login and try again!");
                 return false;
             }
-            printf("[n: number phone]\n");
-            printf("[p: password]\n");
             printf("Choose type to change:");
             scanf("%s", &choice);
             printf("-----------\n");

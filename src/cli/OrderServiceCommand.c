@@ -3,6 +3,7 @@
 //
 
 #include "OrderServiceCommand.h"
+#include "../utils/readFromFile.h"
 
 
 bool OrderServiceChoose(char option){
@@ -59,7 +60,8 @@ bool OrderServiceChoose(char option){
                 show_user_orders("service", NULL);
             } else if (check_role(authorized_roles3, num_roles3)){
                 char choice;
-                printf("Choose type: [g: get all; u: get by username]");
+                readFileContents("guide/ShowService.txt");
+                printf("Choose type:");
                 scanf("%s", &choice);
                 printf("-----------\n");
 
@@ -79,7 +81,6 @@ bool OrderServiceChoose(char option){
                         return false;
                 }
             }
-
 
             return false;
         case 'b':

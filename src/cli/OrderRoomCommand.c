@@ -4,6 +4,7 @@
 
 #include "OrderRoomCommand.h"
 #include "../core/OrderRoom.h"
+#include "../utils/readFromFile.h"
 
 bool OrderRoomChoose(char option){
     OrderRoom room;
@@ -67,6 +68,8 @@ bool OrderRoomChoose(char option){
 
                 show_user_orders("room", NULL);
             } else if (check_role(authorized_roles3, num_roles3)){
+                readFileContents("guide/ShowService.txt");
+
                 char choice;
                 printf("Choose type: [g: get all; u: get by username]");
                 scanf("%s", &choice);

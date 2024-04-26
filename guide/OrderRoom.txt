@@ -1,0 +1,8 @@
+#-------------------------------#
+|      ORDER ROOM CHOOSE        |
+|-------------------------------|
+|    {n}- New Order Room      	|
+|    {s}- Show Order Room       |
+|    {b}- Back to Order Choose	|
+#-------------------------------#
+

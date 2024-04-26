@@ -1,0 +1,11 @@
+@________________________________@
+|           USER's CHOICE        |
+|--------------------------------|
+|     {s}- Sign Up               |
+|     {l}- Login                 |
+|     {r}- Remove USER           |
+|     {a}- Access USER           |
+|     {u}- Edit Information      |
+|     {b}- Back To Menu          |
+@________________________________@
+

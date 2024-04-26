@@ -6,6 +6,7 @@
 #include <stdbool.h>
 #include "System.h"
 #include "stdlib.h"
+#include "src/utils/readFromFile.h"
 
 
 int main(){
@@ -13,6 +14,7 @@ int main(){
     bool exit = false;
 
     while(!exit){
+        readFileContents("guide/System.txt");
         char option;
         printf("Your option:");
         scanf("%s", &option);

@@ -1,0 +1,11 @@
+@__________________________________@
+|          SERVICE CHOICE          |
+|----------------------------------|
+|   {s}- Show List Of Services     |
+|   {n}- Add New Service           |
+|   {u}- Edit Service Information  |
+|   {d}- Delete Service  	   |
+|   {b}- Back To Menu              |
+@__________________________________@
+
+

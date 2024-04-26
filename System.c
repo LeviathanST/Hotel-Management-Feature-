@@ -3,11 +3,13 @@
 //
 
 #include "System.h"
+#include "src/utils/readFromFile.h"
 
 bool Choose(char option){
     bool back = false;
     switch (option) {
         case 'u':
+            readFileContents("guide/USER.txt");
             while(!back){
                 printf("User:");
                 char choice;
@@ -18,6 +20,7 @@ bool Choose(char option){
             }
             return false;
         case 'o':
+            readFileContents("guide/OrderCommand.txt");
             const char* authorized_roles1[] = {"admin", "member"};
             int num_roles1 = sizeof(authorized_roles1) / sizeof(authorized_roles1[0]);
 
@@ -36,6 +39,7 @@ bool Choose(char option){
             }
             return false;
         case 's':
+            readFileContents("guide/SERVICE.txt");
             while(!back){
                 printf("Service:");
                 char choice;
@@ -46,6 +50,7 @@ bool Choose(char option){
             }
             return false;
         case 'r':
+            readFileContents("guide/ROOM.txt");
             while(!back){
                 printf("Room:");
                 char choice;
@@ -57,6 +62,7 @@ bool Choose(char option){
 
             return false;
         case 'a':
+            readFileContents("guide/Staff.txt");
             while(!back){
                 printf("Staff:");
                 char choice;
